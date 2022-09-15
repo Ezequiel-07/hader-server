@@ -1,5 +1,3 @@
-require("dotenv").config()
-
 const express = require("express");
 const morgan = require("morgan");
 const mod = require("method-override");
@@ -29,5 +27,5 @@ app.use(postsRoutes);
 app.use(usersRoutes);
 app.use(dataRoutes);
 
-app.listen(process.env.PORT || app.get("port"))
+app.listen(process.env.PORT || app.get("port"));
 console.log(`server on port: ${process.env.PORT || app.get("port")}`);
